@@ -1,7 +1,7 @@
 {
     "name": "@theoparis/luaparse",
     "version": "0.0.1",
-    "description": "",
+    "description": "A Lua parser in TypeScript",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "config": {

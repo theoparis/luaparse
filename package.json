@@ -14,6 +14,10 @@
             "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
         }
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/creepinson/luaparse"
+    },
     "scripts": {
         "cm": "cz",
         "build": "tsc --build",

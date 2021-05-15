@@ -30,7 +30,7 @@ export interface Location {
     };
 }
 
-export interface Node {
+export interface NodeAdditional {
     type: string;
     range?: TextRange;
     loc?: Location;
@@ -39,82 +39,82 @@ export interface Node {
 
 export type Block = Statement[];
 
-export interface LabelStatement extends Node {
+export interface LabelStatement extends NodeAdditional {
     type: "LabelStatement";
     label: Identifier;
 }
 
-export interface BreakStatement extends Node {
+export interface BreakStatement extends NodeAdditional {
     type: "BreakStatement";
 }
 
-export interface GotoStatement extends Node {
+export interface GotoStatement extends NodeAdditional {
     type: "GotoStatement";
     label: Identifier;
 }
 
-export interface ReturnStatement extends Node {
+export interface ReturnStatement extends NodeAdditional {
     type: "ReturnStatement";
     arguments: Expression[];
 }
 
-export interface IfStatement extends Node {
+export interface IfStatement extends NodeAdditional {
     type: "IfStatement";
     clauses: [IfClause, ...Array<ElseifClause | ElseClause>];
 }
 
-export interface IfClause extends Node {
+export interface IfClause extends NodeAdditional {
     type: "IfClause";
     condition: Expression;
     body: Block;
 }
 
-export interface ElseifClause extends Node {
+export interface ElseifClause extends NodeAdditional {
     type: "ElseifClause";
     condition: Expression;
     body: Block;
 }
 
-export interface ElseClause extends Node {
+export interface ElseClause extends NodeAdditional {
     type: "ElseClause";
     body: Block;
 }
 
-export interface WhileStatement extends Node {
+export interface WhileStatement extends NodeAdditional {
     type: "WhileStatement";
     condition: Expression;
     body: Block;
 }
 
-export interface DoStatement extends Node {
+export interface DoStatement extends NodeAdditional {
     type: "DoStatement";
     body: Block;
 }
 
-export interface RepeatStatement extends Node {
+export interface RepeatStatement extends NodeAdditional {
     type: "RepeatStatement";
     condition: Expression;
     body: Block;
 }
 
-export interface LocalStatement extends Node {
+export interface LocalStatement extends NodeAdditional {
     type: "LocalStatement";
     variables: Identifier[];
     init: Expression[];
 }
 
-export interface AssignmentStatement extends Node {
+export interface AssignmentStatement extends NodeAdditional {
     type: "AssignmentStatement";
     variables: Array<Identifier | MemberExpression | IndexExpression>;
     init: Expression[];
 }
 
-export interface CallStatement extends Node {
+export interface CallStatement extends NodeAdditional {
     type: "CallStatement";
     expression: CallExpression;
 }
 
-export interface FunctionDeclaration extends Node {
+export interface FunctionDeclaration extends NodeAdditional {
     type: "FunctionDeclaration";
     identifier: Identifier | MemberExpression;
     isLocal: boolean;
@@ -122,7 +122,7 @@ export interface FunctionDeclaration extends Node {
     body: Block;
 }
 
-export interface FunctionExpression extends Node {
+export interface FunctionExpression extends NodeAdditional {
     type: "FunctionDeclaration";
     identifier: null;
     isLocal: false;
@@ -130,7 +130,7 @@ export interface FunctionExpression extends Node {
     body: Block;
 }
 
-export interface ForNumericStatement extends Node {
+export interface ForNumericStatement extends NodeAdditional {
     type: "ForNumericStatement";
     variable: Identifier;
     start: Expression;
@@ -139,127 +139,127 @@ export interface ForNumericStatement extends Node {
     body: Block;
 }
 
-export interface ForGenericStatement extends Node {
+export interface ForGenericStatement extends NodeAdditional {
     type: "ForGenericStatement";
     variables: Identifier[];
     iterators: Expression[];
     body: Block;
 }
 
-export interface Chunk extends Node {
+export interface Chunk extends NodeAdditional {
     type: "Chunk";
     body: Block;
     comments?: Comment[];
     globals?: Identifier[];
 }
 
-export interface Identifier extends Node {
+export interface Identifier extends NodeAdditional {
     type: "Identifier";
     name: string;
     isLocal?: boolean;
 }
 
-export interface NumericLiteral extends Node {
+export interface NumericLiteral extends NodeAdditional {
     type: "NumericLiteral";
     value: number;
 }
 
-export interface StringLiteral extends Node {
+export interface StringLiteral extends NodeAdditional {
     type: "StringLiteral";
     value: string;
     raw: string;
 }
 
-export interface BooleanLiteral extends Node {
+export interface BooleanLiteral extends NodeAdditional {
     type: "BooleanLiteral";
     value: boolean;
 }
 
-export interface VarargLiteral extends Node {
+export interface VarargLiteral extends NodeAdditional {
     type: "VarargLiteral";
     value: "...";
 }
 
-export interface NilLiteral extends Node {
+export interface NilLiteral extends NodeAdditional {
     type: "NilLiteral";
     value: null;
     raw: "nil";
 }
 
-export interface TableKey extends Node {
+export interface TableKey extends NodeAdditional {
     type: "TableKey";
     key: Expression;
     value: Expression;
 }
 
-export interface TableKeyString extends Node {
+export interface TableKeyString extends NodeAdditional {
     type: "TableKeyString";
     key: Identifier;
     value: Expression;
 }
 
-export interface TableValue extends Node {
+export interface TableValue extends NodeAdditional {
     type: "TableValue";
     value: Expression;
 }
 
-export interface TableConstructorExpression extends Node {
+export interface TableConstructorExpression extends NodeAdditional {
     type: "TableConstructorExpression";
     fields: Array<TableKey | TableKeyString | TableValue>;
 }
 
-export interface BinaryExpression extends Node {
+export interface BinaryExpression extends NodeAdditional {
     type: "BinaryExpression";
     operator: BinaryOperator;
     left: Expression;
     right: Expression;
 }
 
-export interface LogicalExpression extends Node {
+export interface LogicalExpression extends NodeAdditional {
     type: "LogicalExpression";
     operator: LogicalOperator;
     left: Expression;
     right: Expression;
 }
 
-export interface UnaryExpression extends Node {
+export interface UnaryExpression extends NodeAdditional {
     type: "UnaryExpression";
     operator: UnaryOperator;
     argument: Expression;
 }
 
-export interface MemberExpression extends Node {
+export interface MemberExpression extends NodeAdditional {
     type: "MemberExpression";
     indexer: Indexer;
     identifier: Identifier;
     base: Identifier | Expression;
 }
 
-export interface IndexExpression extends Node {
+export interface IndexExpression extends NodeAdditional {
     type: "IndexExpression";
     base: Expression /* Identifier | MemberExpression */;
     index: Expression;
 }
 
-export interface CallExpression extends Node {
+export interface CallExpression extends NodeAdditional {
     type: "CallExpression";
     base: Identifier | MemberExpression;
     arguments: Expression[];
 }
 
-export interface TableCallExpression extends Node {
+export interface TableCallExpression extends NodeAdditional {
     type: "TableCallExpression";
     base: Identifier | MemberExpression;
     arguments: TableConstructorExpression;
 }
 
-export interface StringCallExpression extends Node {
+export interface StringCallExpression extends NodeAdditional {
     type: "StringCallExpression";
     base: Identifier | MemberExpression;
     argument: StringLiteral;
 }
 
-export interface Comment extends Node {
+export interface Comment extends NodeAdditional {
     type: "Comment";
     value: string;
 }
@@ -307,6 +307,17 @@ export type PrimaryExpression =
     | FunctionExpression;
 
 export type IfClauses = [IfClause, ...Array<ElseifClause | ElseClause>];
+export type Clauses = ElseifClause | IfClause | ElseifClause | ElseClause;
+
+export type Node =
+    | Chunk
+    | Expression
+    | Statement
+    | TableKey
+    | TableKeyString
+    | TableValue
+    | Comment
+    | Clauses;
 
 export interface LuaAstBuilder {
     labelStatement: (label: Identifier) => LabelStatement;

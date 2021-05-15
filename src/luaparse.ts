@@ -43,7 +43,7 @@ import {
     StringLiteral,
     StringCallExpression,
     Comment,
-    Node,
+    NodeAdditional,
     TextRange,
     Location,
     Statement,
@@ -97,7 +97,7 @@ interface ParserOptions {
      * A callback which will be invoked when a syntax node has been completed.
      * The node which has been created will be passed as the only parameter.
      */
-    onCreateNode?: (node: Node) => void;
+    onCreateNode?: (node: NodeAdditional) => void;
     /** A callback which will be invoked when a new scope is created. */
     onCreateScope?: (scope?: Scope) => void;
     /** A callback which will be invoked when the current scope is destroyed. */
@@ -599,7 +599,7 @@ export const ast: LuaAstBuilder = new DefaultLuaAstBuilder();
  *
  * @param node
  */
-function finishNode<T extends Node>(node: T): T {
+function finishNode<T extends NodeAdditional>(node: T): T {
     // Pop a `Marker` off the location-array and attach its location data.
     if (trackLocations) {
         const location = locations.pop();
@@ -1735,7 +1735,7 @@ class Marker {
             this.range[1] = previousToken.range[1];
     }
 
-    public bless(node: Node) {
+    public bless(node: NodeAdditional) {
         if (this.loc) {
             const loc = this.loc;
             node.loc = {

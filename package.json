@@ -25,7 +25,7 @@
         "test": "ts-mocha test/**/*.ts",
         "lint": "eslint {src,test}/**/*.ts --fix",
         "coverage": "nyc ts-mocha test/**/*.ts",
-        "prepare": "husky install && pnpm run build"
+        "prepare": "husky install && npm run build"
     },
     "keywords": [
         "typescript",

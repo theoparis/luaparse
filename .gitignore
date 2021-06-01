@@ -19,3 +19,7 @@ logs
 # IDE Settings
 .vscode
 .idea
+
+pnpm-lock.yaml
+package-lock.json
+yarn.lock

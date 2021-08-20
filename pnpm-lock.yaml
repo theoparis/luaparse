@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/chai': 4.2.18
-  '@types/mocha': 8.2.3
+  '@types/mocha': 9.0.0
   '@types/node': 15.3.0
   '@typescript-eslint/eslint-plugin': 4.28.2
   '@typescript-eslint/parser': 4.28.2
@@ -13,7 +13,7 @@ specifiers:
   eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 3.4.0
   husky: 7.0.0
-  mocha: 9.0.2
+  mocha: 9.1.0
   nyc: 15.1.0
   prettier: 2.3.2
   ts-mocha: 8.0.0
@@ -21,7 +21,7 @@ specifiers:
 
 devDependencies:
   '@types/chai': 4.2.18
-  '@types/mocha': 8.2.3
+  '@types/mocha': 9.0.0
   '@types/node': 15.3.0
   '@typescript-eslint/eslint-plugin': 4.28.2_5031fffb45dfb7117e61c1d8ea1ef3ff
   '@typescript-eslint/parser': 4.28.2_eslint@7.30.0+typescript@4.3.5
@@ -32,10 +32,10 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.30.0
   eslint-plugin-prettier: 3.4.0_0470f3bcd018a045da11d0bbb868d6c6
   husky: 7.0.0
-  mocha: 9.0.2
+  mocha: 9.1.0
   nyc: 15.1.0
   prettier: 2.3.2
-  ts-mocha: 8.0.0_mocha@9.0.2
+  ts-mocha: 8.0.0_mocha@9.1.0
   typescript: 4.3.5
 
 packages:
@@ -355,8 +355,8 @@ packages:
     dev: true
     optional: true
 
-  /@types/mocha/8.2.3:
-    resolution: {integrity: sha512-ekGvFhFgrc2zYQoX4JeZPmVzZxw6Dtllga7iGHzfbYIYkAMUx/sAFP2GdFpLff+vdHXu5fl7WX9AT+TtqYcsyw==}
+  /@types/mocha/9.0.0:
+    resolution: {integrity: sha512-scN0hAWyLVAvLR9AyW7HoFF5sJZglyBsbPuHO4fv7JRvfmPBMfp1ozWqOf/e4wwPNxezBZXRfWzMb6iFLgEVRA==}
     dev: true
 
   /@types/node/15.3.0:
@@ -1893,8 +1893,8 @@ packages:
       minimist: 1.2.5
     dev: true
 
-  /mocha/9.0.2:
-    resolution: {integrity: sha512-FpspiWU+UT9Sixx/wKimvnpkeW0mh6ROAKkIaPokj3xZgxeRhcna/k5X57jJghEr8X+Cgu/Vegf8zCX5ugSuTA==}
+  /mocha/9.1.0:
+    resolution: {integrity: sha512-Kjg/XxYOFFUi0h/FwMOeb6RoroiZ+P1yOfya6NK7h3dNhahrJx1r2XIT3ge4ZQvJM86mdjNA+W5phqRQh7DwCg==}
     engines: {node: '>= 12.0.0'}
     hasBin: true
     dependencies:
@@ -2521,14 +2521,14 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-mocha/8.0.0_mocha@9.0.2:
+  /ts-mocha/8.0.0_mocha@9.1.0:
     resolution: {integrity: sha512-Kou1yxTlubLnD5C3unlCVO7nh0HERTezjoVhVw/M5S1SqoUec0WgllQvPk3vzPMc6by8m6xD1uR1yRf8lnVUbA==}
     engines: {node: '>= 6.X.X'}
     hasBin: true
     peerDependencies:
       mocha: ^3.X.X || ^4.X.X || ^5.X.X || ^6.X.X || ^7.X.X || ^8.X.X
     dependencies:
-      mocha: 9.0.2
+      mocha: 9.1.0
       ts-node: 7.0.1
     optionalDependencies:
       tsconfig-paths: 3.9.0

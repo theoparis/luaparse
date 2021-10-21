@@ -15,7 +15,7 @@ specifiers:
   husky: 7.0.0
   mocha: 9.1.0
   nyc: 15.1.0
-  prettier: 2.3.2
+  prettier: 2.4.1
   ts-mocha: 8.0.0
   typescript: 4.3.5
 
@@ -30,11 +30,11 @@ devDependencies:
   cz-conventional-changelog: 3.3.0
   eslint: 7.30.0
   eslint-config-prettier: 8.3.0_eslint@7.30.0
-  eslint-plugin-prettier: 3.4.0_0470f3bcd018a045da11d0bbb868d6c6
+  eslint-plugin-prettier: 3.4.0_7c8bf512b4708ee89888bfd665b32fae
   husky: 7.0.0
   mocha: 9.1.0
   nyc: 15.1.0
-  prettier: 2.3.2
+  prettier: 2.4.1
   ts-mocha: 8.0.0_mocha@9.1.0
   typescript: 4.3.5
 
@@ -243,6 +243,7 @@ packages:
   /@commitlint/load/12.1.1:
     resolution: {integrity: sha512-qOQtgNdJRULUQWP9jkpTwhj7aEtnqUtqeUpbQ9rjS+GIUST65HZbteNUX4S0mAEGPWqy2aK5xGd73cUfFSvuuw==}
     engines: {node: '>=v10'}
+    requiresBuild: true
     dependencies:
       '@commitlint/execute-rule': 12.1.1
       '@commitlint/resolve-extends': 12.1.1
@@ -995,7 +996,7 @@ packages:
       eslint: 7.30.0
     dev: true
 
-  /eslint-plugin-prettier/3.4.0_0470f3bcd018a045da11d0bbb868d6c6:
+  /eslint-plugin-prettier/3.4.0_7c8bf512b4708ee89888bfd665b32fae:
     resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -1008,7 +1009,7 @@ packages:
     dependencies:
       eslint: 7.30.0
       eslint-config-prettier: 8.3.0_eslint@7.30.0
-      prettier: 2.3.2
+      prettier: 2.4.1
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -1303,6 +1304,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -2150,8 +2152,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier/2.3.2:
-    resolution: {integrity: sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==}
+  /prettier/2.4.1:
+    resolution: {integrity: sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -2551,6 +2553,7 @@ packages:
 
   /tsconfig-paths/3.9.0:
     resolution: {integrity: sha512-dRcuzokWhajtZWkQsDVKbWyY+jgcLC5sqJhg2PSgf4ZkH2aHPvaOY8YWGhmjb68b5qqTfasSsDO9k7RUiEmZAw==}
+    requiresBuild: true
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.1

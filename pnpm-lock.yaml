@@ -16,7 +16,7 @@ specifiers:
   mocha: 9.1.4
   nyc: 15.1.0
   prettier: 2.5.1
-  ts-mocha: 8.0.0
+  ts-mocha: 9.0.2
   typescript: 4.5.4
 
 devDependencies:
@@ -35,7 +35,7 @@ devDependencies:
   mocha: 9.1.4
   nyc: 15.1.0
   prettier: 2.5.1
-  ts-mocha: 8.0.0_mocha@9.1.4
+  ts-mocha: 9.0.2_mocha@9.1.4
   typescript: 4.5.4
 
 packages:
@@ -2487,12 +2487,12 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-mocha/8.0.0_mocha@9.1.4:
-    resolution: {integrity: sha512-Kou1yxTlubLnD5C3unlCVO7nh0HERTezjoVhVw/M5S1SqoUec0WgllQvPk3vzPMc6by8m6xD1uR1yRf8lnVUbA==}
+  /ts-mocha/9.0.2_mocha@9.1.4:
+    resolution: {integrity: sha512-WyQjvnzwrrubl0JT7EC1yWmNpcsU3fOuBFfdps30zbmFBgKniSaSOyZMZx+Wq7kytUs5CY+pEbSYEbGfIKnXTw==}
     engines: {node: '>= 6.X.X'}
     hasBin: true
     peerDependencies:
-      mocha: ^3.X.X || ^4.X.X || ^5.X.X || ^6.X.X || ^7.X.X || ^8.X.X
+      mocha: ^3.X.X || ^4.X.X || ^5.X.X || ^6.X.X || ^7.X.X || ^8.X.X || ^9.X.X
     dependencies:
       mocha: 9.1.4
       ts-node: 7.0.1

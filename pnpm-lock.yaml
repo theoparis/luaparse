@@ -13,7 +13,7 @@ specifiers:
   eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 3.4.0
   husky: 7.0.0
-  mocha: 9.1.0
+  mocha: 9.1.4
   nyc: 15.1.0
   prettier: 2.4.1
   ts-mocha: 8.0.0
@@ -32,10 +32,10 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.30.0
   eslint-plugin-prettier: 3.4.0_7c8bf512b4708ee89888bfd665b32fae
   husky: 7.0.0
-  mocha: 9.1.0
+  mocha: 9.1.4
   nyc: 15.1.0
   prettier: 2.4.1
-  ts-mocha: 8.0.0_mocha@9.1.0
+  ts-mocha: 8.0.0_mocha@9.1.4
   typescript: 4.3.5
 
 packages:
@@ -72,7 +72,7 @@ packages:
       '@babel/traverse': 7.12.9
       '@babel/types': 7.12.7
       convert-source-map: 1.7.0
-      debug: 4.3.1
+      debug: 4.3.2
       gensync: 1.0.0-beta.2
       json5: 2.1.3
       lodash: 4.17.20
@@ -219,7 +219,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.11.0
       '@babel/parser': 7.12.7
       '@babel/types': 7.12.7
-      debug: 4.3.1
+      debug: 4.3.2
       globals: 11.12.0
       lodash: 4.17.20
     transitivePeerDependencies:
@@ -279,7 +279,7 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.1
+      debug: 4.3.2
       espree: 7.3.1
       globals: 13.9.0
       ignore: 4.0.6
@@ -296,7 +296,7 @@ packages:
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 1.2.0
-      debug: 4.3.1
+      debug: 4.3.2
       minimatch: 3.0.4
     transitivePeerDependencies:
       - supports-color
@@ -313,7 +313,7 @@ packages:
       camelcase: 5.3.1
       find-up: 4.1.0
       get-package-type: 0.1.0
-      js-yaml: 3.14.0
+      js-yaml: 3.14.1
       resolve-from: 5.0.0
     dev: true
 
@@ -456,7 +456,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 4.28.2
       '@typescript-eslint/visitor-keys': 4.28.2
-      debug: 4.3.1
+      debug: 4.3.2
       globby: 11.0.3
       is-glob: 4.0.1
       semver: 7.3.5
@@ -737,7 +737,7 @@ packages:
   /cliui/6.0.0:
     resolution: {integrity: sha512-t6wbgtoCXvAzst7QgXxJYqPt0usEfbgQdftEPbLL/cvv6HPE5VgvqCuAIDR0NgU52ds6rFwqrgakNLrHEjCbrQ==}
     dependencies:
-      string-width: 4.2.0
+      string-width: 4.2.2
       strip-ansi: 6.0.0
       wrap-ansi: 6.2.0
     dev: true
@@ -871,8 +871,20 @@ packages:
       ms: 2.1.2
     dev: true
 
-  /debug/4.3.1_supports-color@8.1.1:
-    resolution: {integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==}
+  /debug/4.3.2:
+    resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
+  /debug/4.3.2_supports-color@8.1.1:
+    resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -1683,7 +1695,7 @@ packages:
     resolution: {integrity: sha512-c16LpFRkR8vQXyHZ5nLpY35JZtzj1PQY1iZmesUbf1FZHbIupcWfjgOXBY9YHkLEQ6puz1u4Dgj6qmU/DisrZg==}
     engines: {node: '>=8'}
     dependencies:
-      debug: 4.3.1
+      debug: 4.3.2
       istanbul-lib-coverage: 3.0.0
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -1700,14 +1712,6 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: true
-
-  /js-yaml/3.14.0:
-    resolution: {integrity: sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==}
-    hasBin: true
-    dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
     dev: true
 
   /js-yaml/3.14.1:
@@ -1895,8 +1899,8 @@ packages:
       minimist: 1.2.5
     dev: true
 
-  /mocha/9.1.0:
-    resolution: {integrity: sha512-Kjg/XxYOFFUi0h/FwMOeb6RoroiZ+P1yOfya6NK7h3dNhahrJx1r2XIT3ge4ZQvJM86mdjNA+W5phqRQh7DwCg==}
+  /mocha/9.1.4:
+    resolution: {integrity: sha512-+q2aV5VlJZuLgCWoBvGI5zEwPF9eEI0kr/sAA9Jm4xMND7RfIEyF8JE7C0JIg8WXRG+P1sdIAb5ccoHPlXLzcw==}
     engines: {node: '>= 12.0.0'}
     hasBin: true
     dependencies:
@@ -1904,7 +1908,7 @@ packages:
       ansi-colors: 4.1.1
       browser-stdout: 1.3.1
       chokidar: 3.5.2
-      debug: 4.3.1_supports-color@8.1.1
+      debug: 4.3.2_supports-color@8.1.1
       diff: 5.0.0
       escape-string-regexp: 4.0.0
       find-up: 5.0.0
@@ -1915,12 +1919,11 @@ packages:
       log-symbols: 4.1.0
       minimatch: 3.0.4
       ms: 2.1.3
-      nanoid: 3.1.23
+      nanoid: 3.1.25
       serialize-javascript: 6.0.0
       strip-json-comments: 3.1.1
       supports-color: 8.1.1
       which: 2.0.2
-      wide-align: 1.1.3
       workerpool: 6.1.5
       yargs: 16.2.0
       yargs-parser: 20.2.4
@@ -1939,8 +1942,8 @@ packages:
     resolution: {integrity: sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=}
     dev: true
 
-  /nanoid/3.1.23:
-    resolution: {integrity: sha512-FiB0kzdP0FFVGDKlRLEQ1BgDzU87dy5NnzjeW9YZNt+/c3+q82EQDUwniSAUxp/F0gFNI1ZhKU1FqYsMuqZVnw==}
+  /nanoid/3.1.25:
+    resolution: {integrity: sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
@@ -2394,15 +2397,6 @@ packages:
       strip-ansi: 4.0.0
     dev: true
 
-  /string-width/4.2.0:
-    resolution: {integrity: sha512-zUz5JD+tgqtuDjMhwIg5uFVV3dtqZ9yQJlZVfq4I01/K5Paj5UHj7VyrQOJvzawSVlKpObApbfD0Ed6yJc+1eg==}
-    engines: {node: '>=8'}
-    dependencies:
-      emoji-regex: 8.0.0
-      is-fullwidth-code-point: 3.0.0
-      strip-ansi: 6.0.0
-    dev: true
-
   /string-width/4.2.2:
     resolution: {integrity: sha512-XBJbT3N4JhVumXE0eoLU9DCjcaF92KLNqTmFCnG1pf8duUxFGwtP6AD6nkjw9a3IdiRtL3E2w3JDiE/xi3vOeA==}
     engines: {node: '>=8'}
@@ -2492,7 +2486,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@istanbuljs/schema': 0.1.2
-      glob: 7.1.6
+      glob: 7.1.7
       minimatch: 3.0.4
     dev: true
 
@@ -2523,14 +2517,14 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-mocha/8.0.0_mocha@9.1.0:
+  /ts-mocha/8.0.0_mocha@9.1.4:
     resolution: {integrity: sha512-Kou1yxTlubLnD5C3unlCVO7nh0HERTezjoVhVw/M5S1SqoUec0WgllQvPk3vzPMc6by8m6xD1uR1yRf8lnVUbA==}
     engines: {node: '>= 6.X.X'}
     hasBin: true
     peerDependencies:
       mocha: ^3.X.X || ^4.X.X || ^5.X.X || ^6.X.X || ^7.X.X || ^8.X.X
     dependencies:
-      mocha: 9.1.0
+      mocha: 9.1.4
       ts-node: 7.0.1
     optionalDependencies:
       tsconfig-paths: 3.9.0
@@ -2649,12 +2643,6 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /wide-align/1.1.3:
-    resolution: {integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==}
-    dependencies:
-      string-width: 2.1.1
-    dev: true
-
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
@@ -2669,7 +2657,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       ansi-styles: 4.3.0
-      string-width: 4.2.0
+      string-width: 4.2.2
       strip-ansi: 6.0.0
     dev: true
 
@@ -2748,7 +2736,7 @@ packages:
       require-directory: 2.1.1
       require-main-filename: 2.0.0
       set-blocking: 2.0.0
-      string-width: 4.2.0
+      string-width: 4.2.2
       which-module: 2.0.0
       y18n: 4.0.0
       yargs-parser: 18.1.3
